@@ -11,14 +11,7 @@ def write_to_file(filename):
 def read_file(filename):
     with open(filename) as f:
         return f.read()
-
-def get_result_from_url(url):
-    result = requests.get(url)
-    if result.status_code == 200:
-        return result
-    else:
-        print("Status code {}".format(result.status_code))
-
+    
 
 def sava_headers_in_json(url: str, filename):
     r = requests.get(url)
